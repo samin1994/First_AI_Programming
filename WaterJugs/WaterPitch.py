@@ -1,3 +1,4 @@
+from AI_Search.WaterJugs.SearchAlgorithms import *
 
 
 class WaterPitch:
@@ -6,6 +7,13 @@ class WaterPitch:
 
         state = {'Three': 0, 'Four': 0}
         self.state = state
+        self.pathCost = [0]
+        self.bestPath = []
+        self.visitedNodes = []
+        self.expandedNodes = []
+        self.maxMemoryUsed = []
+        self.finalState = []
+        self.finalState = {}
 
     def actions(self, state):
 
@@ -86,3 +94,19 @@ class WaterPitch:
 
     def pathcost(self, current_cost):
         return current_cost + 1
+
+    def finalresult(self):
+        return [self.visitedNodes] + [self.expandedNodes] + [self.bestPath] + [self.pathCost] + [self.maxMemoryUsed] + [self.finalState]
+
+
+result = []
+problem = WaterPitch()
+dfs_tree_search(problem)
+
+row = problem.finalresult()
+result.append(row)
+
+print('The path to Water Pitches Problem : ')
+print('\n')
+print(result)
+
