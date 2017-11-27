@@ -179,3 +179,15 @@ def DO_SEARCH(problem, searchers):
         result.append(row)
 
     return result
+
+
+def find(l, elem):
+    place = {'x': 0, 'y': 0}
+    for i in [0, 3]:
+        for j in [0, 3]:
+            if l[i][j] == elem:
+                place['x'] = i
+                place['y'] = j
+                return place
+            else:
+                return -1

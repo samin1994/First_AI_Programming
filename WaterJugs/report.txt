@@ -1,0 +1,12 @@
+first I created a problem class and added primary functions like actions and result.
+then I drew the graph (with all possible states) and for each node I wrote every possible action in actions function.
+I used a dictionary for state structure and it is 0 if the pitch is empty and 1 if it is full!
+when I wanted to write result function I assumed that in each state(node) only valid states are passed to result function!
+I implemented all search algorithms in searchAlgorithms.py file and used utils.py file to implement some necessary functions like creating frontier queue and creating graph or tree.
+
+For this problem I print this kind of result :
+
+Visited nodes , expanded nodes , best path , path cost , max memory used , final state
+
+so I can know the time and memory complexity for this problem
+and I used only DFS algorithm for this problem!
